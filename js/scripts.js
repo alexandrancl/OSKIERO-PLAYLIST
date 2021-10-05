@@ -63,7 +63,7 @@ const favs = [
         title: "Dream Girl (Remix)",
         audio: "audio/Dream Girl",
         cover: "img/dream girl.JPG",
-        artist: "ir Sairs"
+        artist: "Ir Sairs"
     },
     {
         id: 10,
@@ -84,7 +84,7 @@ const favs = [
         title: "Feel me",
         audio: "audio/Feel me",
         cover: "img/the_academy.JPG",
-        artist: "Karol G"
+        artist: "Rich Music LTD"
     },
     {
         id: 13,
