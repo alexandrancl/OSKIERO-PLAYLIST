@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 
@@ -85,7 +86,7 @@ header{
 .filter-genere{
     font-family: 'Pontano Sans', sans-serif;
     font-size: 25px;
-    color: white;
+    color: #757575;
     background-color: #C4C4C4;
     border-radius: 50px;
     padding: 0.1em 0.8em;
@@ -98,12 +99,26 @@ header{
     outline: 0px;
 }
 
+.filter-genere::-webkit-scrollbar{
+    width: 7px;
+}
+.filter-genere::-webkit-scrollbar-thumb{
+    background: #757575;
+}
+
 .body-songs{
     padding: 70px 0 0 0;
-    max-width: 1500px;
+    max-width: 1700px;
     display: flex;
     margin: 5em;
     align-items: center;
+}
+
+.songs::-webkit-scrollbar{
+    width: 7px;
+}
+.songs::-webkit-scrollbar-thumb{
+    background: #CFABEE;
 }
 
 .list-songs img{
@@ -127,22 +142,148 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 25px;
 }
 
 .data div{
     display: flex;
     flex-direction: column;
+    padding-left: 18px;
 }
 
   .a1{
-    font-family: 'Sarabun', sans-serif;
+      color: white;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 30px;
   }
 
   .a2{
-    font-family: 'Sarabun', sans-serif;
+      color: white;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
   }
 
 .player{
     width: 50%;
     padding-left: 4em;
+}
+
+.player .song{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img{
+    border-radius: 50%;
+    width: 440px;
+    height: 440px;
+    top: 1em;
+    animation-name: rotacion;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+@keyframes rotacion{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.8em;
+}
+.title .name{
+    font-family: 'Sarabun', sans-serif;
+    font-weight: bolder;
+    color: #A3A5C9;
+    font-size: 50px;
+}
+.title .artist{
+    font-family: 'Sarabun', sans-serif;
+    color: #A3A5C9;
+    font-size: 20px;
+}
+
+.parte2{
+    width: 50%;
+    height: 100px;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-tiempo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1em;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+}
+.barra-tiempo::-webkit-slider-runnable-track {
+    background-color:#A3A5C9;
+    height: .3em;
+}
+.barra-tiempo::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: #A3A5C9;
+    width: 1em;
+    height: 1em;
+    margin-top: -5px;
+}
+
+.controles{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+}
+.controles button{
+    background-color: rgb(0, 0, 0, 0.0);
+}
+.controles input{
+    padding: .1em;
+    text-align: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.barra-vol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+}
+.barra-vol input{
+    cursor: pointer;
+}
+
+.barr-vol{
+    margin-left: 1em;
+    -webkit-appearance: none;
+}
+.barr-vol::-webkit-slider-runnable-track {
+    background-color:#A3A5C9;
+    height: .3em;
+}
+.barr-vol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: #A3A5C9;
+    width: 1em;
+    height: 1em;
+    margin-top: -5px;
 }
