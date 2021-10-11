@@ -4,20 +4,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 
 *{
-   margin: 0px;
-   padding: 0px;
-   border: 0px;  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body{
+    width: 100%;
+    justify-content: space-between;
     background-image: url(../img/fondo1.jpg);
-    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
-    display: block;
 }
 
 header{
@@ -62,11 +61,27 @@ header{
        background: #8F8792;
    }
 
-.tabs{
+.contenido{
     display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 9em;
 }
 
-.search{
+.arriba{
+    display: flex;
+    align-items: center;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 5em;
+}
+
+.barra-buscadora{
     font-family: 'Pontano Sans', sans-serif;
     font-size: 25px;
     color: white;
@@ -92,90 +107,17 @@ header{
     padding: 0.1em 0.8em;
     border: 0px;
     outline: 0px;
+    transition: .2s ease all;
 }
 
-.filter-genere option{
-    transition: all 0.5s linear;
-    outline: 0px;
-}
-
-.filter-genere::-webkit-scrollbar{
-    width: 7px;
-}
-.filter-genere::-webkit-scrollbar-thumb{
-    background: #757575;
-}
-
-.body-songs{
-    padding: 70px 0 0 0;
-    max-width: 1700px;
-    display: flex;
-    margin: 5em;
-    align-items: center;
-}
-
-.songs::-webkit-scrollbar{
-    width: 7px;
-}
-.songs::-webkit-scrollbar-thumb{
-    background: #CFABEE;
-}
-
-.list-songs img{
-    width: 5em;
-    height: 5em;
-}
-
-.playlist{
-    width: 50%;
-}
-
-.songs{
-    background-color: rgb(0, 0, 0, 0.56);
-    margin-top: 2em;
-    padding: 2em;
-    height: 600px;
-    overflow-y: scroll;
-}
-
-.list-item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 25px;
-}
-
-.data div{
+.reproductor{
     display: flex;
     flex-direction: column;
-    padding-left: 18px;
-}
-
-  .a1{
-      color: white;
-      font-family: 'Sarabun', sans-serif;
-      font-size: 30px;
-  }
-
-  .a2{
-      color: white;
-      font-family: 'Sarabun', sans-serif;
-      font-size: 20px;
-      font-weight: lighter;
-  }
-
-.player{
-    width: 50%;
-    padding-left: 4em;
-}
-
-.player .song{
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    align-content: center;
 }
-
-.image-container img{
+.album img{ 
     border-radius: 50%;
     width: 440px;
     height: 440px;
@@ -191,28 +133,10 @@ header{
     to{transform: rotateZ(360deg);}
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.8em;
-}
-.title .name{
-    font-family: 'Sarabun', sans-serif;
-    font-weight: bolder;
-    color: #A3A5C9;
-    font-size: 50px;
-}
-.title .artist{
-    font-family: 'Sarabun', sans-serif;
-    color: #A3A5C9;
-    font-size: 20px;
-}
-
 .parte2{
     width: 50%;
     height: 100px;
-    padding: .5em;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,14 +144,13 @@ header{
 }
 
 .barra-tiempo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    margin: 1em;
-    cursor: pointer;
-
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-appearance: none;
+    margin: 1em;
 }
 .barra-tiempo::-webkit-slider-runnable-track {
     background-color:#A3A5C9;
@@ -245,36 +168,38 @@ header{
 .controles{
     width: 40vw;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 .controles button{
-    background-color: rgb(0, 0, 0, 0.0);
-}
-.controles input{
+    font-size: 2em;
     padding: .1em;
     text-align: center;
+    background-color: rgb(0, 0, 0, 0.0);
+    color: #A3A5C9;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    margin: 0.5em;
     justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem;
+    align-items: center
 }
 
+
+.control2{
+    color: #A3A5C9;
+    font-size: 2em;
+}
 .barra-vol{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: 300px;
+
+    -webkit-appearance: none;
 }
 .barra-vol input{
     cursor: pointer;
 }
 
-.barr-vol{
-    margin-left: 1em;
-    -webkit-appearance: none;
-}
 .barr-vol::-webkit-slider-runnable-track {
     background-color:#A3A5C9;
     height: .3em;
@@ -286,4 +211,70 @@ header{
     width: 1em;
     height: 1em;
     margin-top: -5px;
+}
+
+
+
+/*Estilos para lista de reproduccion*/
+.songs{
+    background-color: rgb(0, 0, 0, 0.56);
+    margin-top: 2em;
+    padding: 2em;
+    height: 700px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+}
+.songs::-webkit-scrollbar{
+    width: 7px;
+}
+.songs::-webkit-scrollbar-thumb{
+    background: #CFABEE;
+}
+.list-songs{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+.list-item{
+    padding-top: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.list-item img{
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+}
+.list-item:hover{
+    transform: scale(0.95); 
+}
+
+.data{
+    color: white;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 30px;
+    margin-left: .5em;
+    cursor: pointer;
+}
+.data:hover{
+    transform: scale(0.95);
+}
+
+.otraforma{
+    display: flex;
+}
+
+.diseño{
+    display: flex;
+    justify-content: flex-start;
+}
+.song{
+    width: 5em;
+    height: 5em;
 }

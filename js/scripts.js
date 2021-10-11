@@ -1,130 +1,130 @@
-const playpauseBTN = document.getElementById('play-boton')
-const stopBTN = document.getElementById('stop-boton')
-const previousBTN = document.getElementById('previous-boton')
-const nextBTN = document.getElementById('next-boton')
-const randomBTN = document.getElementById('random-boton')
-const imagen = document.getElementById('imagen')
-const song = document.getElementById('audio')
-const icono = document.getElementById('icono')
-const icono2 = document.getElementById('icono2')
-const volumen = document.getElementById('volume-control')
-const tiempo = document.getElementById('tiempo-control')
+let playpauseBTN = document.getElementById('play-boton')
+let stopBTN = document.getElementById('stop-boton')
+let previousBTN = document.getElementById('previous-boton')
+let nextBTN = document.getElementById('next-boton')
+let randomBTN = document.getElementById('random-boton')
+let imagen = document.getElementById('imagen')
+let song = document.getElementById('audio')
+let icono = document.getElementById('icono')
+let icono2 = document.getElementById('icono2')
+let volumen = document.getElementById('volume-control')
+let tiempo = document.getElementById('tiempo-control')
 
-const songs = [
+let songs = [
     {
-        id: 0,
+        id:0,
         genero: 'reggaeton',
-        title: 'Ahora me llama',
-        audio: 'audio/Ahora me llama',
-        cover: 'img/unstoppable.JPG',
-        artist: 'Karol G ft. Bad Bunny'
+        pista: 'Ahora me llama.mp4',
+        imagen: 'unstoppable.JPG',
+        artista: 'Karol G',
+        titulo: 'Ahora me llama'
     },
     {
-        id: 1,
+        id:1,
         genero: 'pop',
-        title: 'Cuando nadie ve',
-        audio: 'audio/Cuando nadie ve',
-        cover: 'img/cuando_nadie_ve.JPG',
-        artist: 'Morat'
+        pista: 'Cuando nadie ve.mp4',
+        imagen: 'cuando_nadie_ve.JPG',
+        artista: 'Morat',
+        titulo: 'Cuando nadie ve'
     },
     {
-        id: 2,
+        id:2,
         genero: 'reggaeton',
-        title: 'Dákiti',
-        audio: 'audio/Dákiti',
-        cover: 'img/el_último_tour.JPG',
-        artist: 'Bad Bunny ft. Jhay Cortez'
+        pista: 'Dákiti.mp4',
+        imagen: 'el_último_tour.JPG',
+        artista: 'Bad Bunny',
+        titulo: 'Dákiti'
     },
     {
-        id: 3,
+        id:3,
         genero: 'reggaeton',
-        title: 'Es un secreto',
-        audio: 'audio/Es un secreto',
-        cover: 'img/house_of_pleasure.JPG',
-        artist: 'Plan B'
+        pista: 'Es un secreto.mp4',
+        imagen: 'house_of_pleasure.JPG',
+        artista: 'Plan B',
+        titulo: 'Es un secreto'
     },
     {
-        id: 4,
+        id:4,
         genero: 'pop',
-        title: 'Hips don´t lie',
-        audio: 'audio/Hips don´t lie',
-        cover: 'img/hips_dont_lie.JPG',
-        artist: 'Shakira'
+        pista: 'Hips don´t lie.mp4',
+        imagen: 'hips_dont_lie.JPG',
+        artista: 'Shakira',
+        titulo: 'Hips don´t lie'
     },
-    
-    {
-        id: 5,
+    { 
+        id:5,
         genero: 'reggaeton',
-        title: 'Llamado de emergencia',
-        audio: 'audio/Llamado de emergencia',
-        cover: 'img/talento_de_barrio.JPG',
-        artist: 'Daddy Yankee'
+        pista: 'Llamado de emergencia.mp4',
+        imagen: 'talento_de_barrio.JPG',
+        artista: 'Daddy Yankee',
+        titulo: 'Llamado de emergencia'
     },
     {
-        id: 6,
+        id:6,
+        genero: 'reggaaeton',
+        pista: 'Mala influencia.mp4',
+        imagen: 'mala_influencia.JPG',
+        artista: 'Noriel x Manuel Turizo',
+        titulo: 'Mala Influencia'
+    },
+    {
+        id:7,
+        genero: 'pop',
+        pista: 'Nunca te olvide.mp4',
+        imagen: 'nunca_te_olvide.JPG',
+        artista: 'Morat',
+        titulo: 'Nunca te olvidé'
+    },
+    {
+        id:8,
         genero: 'reggaeton',
-        title: 'Mala Influencia',
-        audio: 'audio/Mala Influencia',
-        cover: 'img/mala_influencia.JPG',
-        artist: 'Noriel, Manuel Turizo'
+        pista: 'Perreo en la luna.mp4',
+        imagen: 'the_academy.JPG',
+        artista: 'Rich Music LTD, Sech, Dalex ft. Justin Quiles, Lenny Tavárez, Feid',
+        titulo: 'Perreo en la luna'
     },
     {
-        id: 7,
+        id:9,
         genero: 'pop',
-        title: 'Nunca te olvide',
-        audio: 'audio/Nunca te olvide',
-        cover: 'img/nunca_te_olvide.JPG',
-        artist: 'Morat'
+        pista: 'Promiscuous.mp4',
+        imagen: 'promiscuous.JPG',
+        artista: 'Nelly Furtado',
+        titulo: 'Promiscuous'
     },
     {
-        id: 8,
+        id:10,
         genero: 'reggaeton',
-        title: 'Perreo en la luna',
-        audio: 'audio/Perreo en la luna',
-        cover: 'img/the_academy.JPG',
-        artist: 'Rich Music LTD, Sech, Dalex ft. Justin Quiles, Lenny Tavárez, Feid'
+        pista: 'Sin contrato.mp4',
+        imagen: 'pretty_boy_dirty_boy.JPG',
+        artista: 'Maluma',
+        titulo: 'Sin contrato'
     },
     {
-        id: 9,
+        id:11,
         genero: 'pop',
-        title: 'Promiscuous',
-        audio: 'audio/Promiscuous',
-        cover: 'img/promiscuous.JPG',
-        artist: 'Nelly Furtado'
+        pista: 'Thong song.mp4',
+        imagen: 'thong_song.JPG',
+        artista: 'Sisqo',
+        titulo: 'Thong Song'
     },
     {
-        id: 10,
-        genero: 'reggaeton',
-        title: 'Sin contrato',
-        audio: 'audio/Sin contrato',
-        cover: 'img/pretty_boy_dirty_boy.JPG',
-        artist: 'Maluma'
-    },
-    {
-        id: 11,
+        id:12,
         genero: 'pop',
-        title: 'Thong song',
-        audio: 'audio/Thong song',
-        cover: 'img/thong_song.JPG',
-        artist: 'Sisqo'
+        pista: 'Total eclipse of the heart.mp4',
+        imagen: 'total.JPG',
+        artista: 'Glee Cast',
+        titulo: 'Total eclipse of the heart (Cover)'
     },
     {
-        id: 12,
+        id:13,
         genero: 'pop',
-        title: 'Total eclipse of the heart (Cover)',
-        audio: 'audio/Total eclipse of the heart',
-        cover: 'img/total.JPG',
-        artist: 'Glee cast'
-    },
-    {
-        id: 13,
-        genero: 'pop',
-        title: 'Worth it',
-        audio: 'audio/Worth it',
-        cover: 'img/worth_it.JPG',
-        artist: 'Fifth Harmony ft. Kid Ink'
+        pista: 'Worth it.mp4',
+        imagen: 'worth_it.JPG',
+        artista: 'Fifth Harmony ft. Kid Ink',
+        titulo: 'Worth it'
     },
 ]
+
 
 let num_pista = 0;
 previousBTN.addEventListener('click',()=>{
@@ -149,6 +149,7 @@ song.addEventListener('ended',()=>{
     }
 })
 
+
 let estado = true;
 let progress;
 playpauseBTN.addEventListener('click',()=>{
@@ -159,8 +160,8 @@ playpauseBTN.addEventListener('click',()=>{
         pausedSong(0);
     }
 })
-document.addEventListener('keypress',(xd)=>{
-    if(xd.code === 'Space' && estado)
+document.addEventListener('keypress',(xde)=>{
+    if(xde.code === 'Space' && estado)
     {
         playSong()
     }
@@ -168,6 +169,7 @@ document.addEventListener('keypress',(xd)=>{
         pausedSong()
     }
 })
+
 
 stopBTN.addEventListener('click',()=>{
     pausedSong();

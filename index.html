@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSKIERO PLAYLIST</title>
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <title>OSKIERO PLAYLIST</title>
 </head>
 <body>
     <header>
@@ -20,176 +20,45 @@
             </nav>
         </div>
     </header>
-    <div class="body-songs">
-        <div class="playlist">
-            <div class="tabs">
-                <input type="text" class="search" id="input.search" placeholder="Buscar">
+    <div class="contenido">
+        <div class="buscador">
+            <div class="arriba">
+                <input type="text" class="barra-buscadora" id="input.search" placeholder="Buscar">
                 <div class="filters">
-                    <select class="filter-genere" id="filter-genere">
+                    <select id="filter-genere" class="filter-genere">
                         <option value="all">Todo</option>
-                        <option value="pop">Pop</option>
                         <option value="reggaeton">Reggaeton</option>
+                        <option value="pop">Pop</option>
                     </select>
                 </div>
             </div>
             <div class="songs">
-                <section id="list-songs" class="list-songs">
-                   <article class="list-item" id="0">
-                        <img src="img/unstoppable.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Ahora me llama</span>
-                                <span class="a2">Karol G ft. Bad Bunny</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="1">
-                        <img src="img/cuando_nadie_ve.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Cuando nadie ve</span>
-                                <span class="a2">Morat</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="2">
-                        <img src="img/el_último_tour.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Dákiti</span>
-                                <span class="a2">Bad Bunny ft. Jhay Cortez</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="3">
-                        <img src="img/house_of_pleasure.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Es un secreto</span>
-                                <span class="a2">Plan B</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="4">
-                        <img src="img/hips_dont_lie.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Hips don't lie</span>
-                                <span class="a2">Shakira</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="5">
-                        <img src="img/talento_de_barrio.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Llamado de emergencia</span>
-                                <span class="a2">Daddy Yankee</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="6">
-                        <img src="img/mala_influencia.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Mala Influencia</span>
-                                <span class="a2">Noriel, Manuel Turizo</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="7">
-                        <img src="img/nunca_te_olvide.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Nunca te olvide</span>
-                                <span class="a2">Morat</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="8">
-                        <img src="img/the_academy.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Perreo en la luna</span>
-                                <span class="a2">Rich Music LTD, Sech, Dalex ft. Justin Quiles, Lenny Tavárez, Feid</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="9">
-                        <img src="img/promiscuous.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Promiscuous</span>
-                                <span class="a2">Nelly Furtado</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="10">
-                        <img src="img/pretty_boy_dirty_boy.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Sin contrato</span>
-                                <span class="a2">Maluma</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="11">
-                        <img src="img/thong_song.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Thong song</span>
-                                <span class="a2">Sisqo</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="12">
-                        <img src="img/total.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Total eclipse of the heart (Cover)</span>
-                                <span class="a2">Glee cast</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="list-item" id="13">
-                        <img src="img/worth_it.JPG" alt="">
-                        <div class="data">
-                            <div>
-                                <span class="a1">Worth it</span>
-                                <span class="a2">Fifth Harmony ft. Kid Ink</span>
-                            </div>
-                        </div>
-                    </article>
-                </section>
+                <section id="list_songs" class="list-songs"></section>
             </div>
         </div>
-        <div class="player">
-            <div class="song">
-                <div class="image-container">
-                    <img class="image" id="imagen" src="img/unstoppable.JPG" alt="">
-                </div>
-                <div class="title">
-                    <div class="name">Ahora me llama</div>
-                    <div class="artist">Karol G ft. Bad Bunny</div>
+        <div class="otraforma">
+            <div class="reproductor">
+                <div class = "album">
+                    <img src="img/free.jpg" id="imagen">
                 </div>
                 <div class="parte2">
                     <input type="range" class="barra-tiempo" name="tiempo" id="tiempo-control" min="0" step="1">
                     <div class="controles">
-                        <audio id="audio" src="audio/Ahora me llama.mp4"></audio>
-                        <button id="previous-boton"><input type="image" src="img/previous.png" width="15px" height="15px"></button>
-                        <button id="play-boton"><input type="image" id="icono" src="img/play.png" width="15px" height="15px"></button>
-                        <button id="next-boton"><input type="image" src="img/next.png" width="15px" height="15px"></button>
-                        <button id="stop-boton"><input type="image" src="img/replay.png" width="15px" height="15px"></button>
-                        <button id="random-boton"><input type="image" id="icono2" src="img/random.png" width="15px" height="15px"></button>
+                        <audio id="audio" src="audio/MKTO - Classic.mp3"></audio>
+                        <button id="previous-boton"><span class="mdi mdi-skip-previous"></span></button>
+                        <button id="play-boton"><span id="icono" class="mdi mdi-play-pause"></span></button>
+                        <button id="next-boton"><span class="mdi mdi-skip-next"></span></button>
+                        <button id="stop-boton"><span class="mdi mdi-autorenew"></span></button>
+                        <button id="random-boton"><span id="icono2" class="mdi mdi-shuffle-variant"></span></button>
                     </div>
                 </div>
                 <div class="barra-vol">
-                    <input type="image" src="img/volume.png" width="35px" height="35px">
+                    <span class="control2 mdi mdi-volume-high"></span>
                     <input type="range" class="barr-vol" name="volume" id="volume-control" min="0" max="1" step="0.01">
                 </div>
             </div>
-        </div>
+        </div>    
     </div>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
